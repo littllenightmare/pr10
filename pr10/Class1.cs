@@ -10,34 +10,34 @@ namespace pr10
     {
         public static int[] GenerateRandomArray(int min, int max)
         {
-            if (min <= 0)
-            {
-                int count = 0;
-                for (int j = min; j <= max; j++)
+                if (min <= 0)
                 {
-                    count++;
+                    int count = 0;
+                    for (int j = min; j <= max; j++)
+                    {
+                        count++;
+                    }
+                    int[] array = new int[count];
+                    for (int i = 0; i < count; i++)
+                    {
+                        array[i] = min++;
+                    }
+                    return array;
                 }
-                int[] array = new int[count];
-                for (int i = 0; i < count; i++)
+                else
                 {
-                    array[i] = min++;
+                    int count = 0;
+                    for (int j = min; j <= max; j++)
+                    {
+                        count++;
+                    }
+                    int[] array = new int[count];
+                    for (int i = 0; i < count; i++)
+                    {
+                        array[i] = min++;
+                    }
+                    return array;
                 }
-                return array;
-            }
-            else
-            {
-                int count = 0;
-                for (int j = min; j <= max; j++)
-                {
-                    count++;
-                }
-                int[] array = new int[count];
-                for (int i = 0; i < count; i++)
-                {
-                    array[i] = min++;
-                }
-                return array;
-            }
 
         }
     }
