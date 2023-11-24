@@ -1,5 +1,6 @@
 ﻿using pr10;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -19,11 +20,11 @@ namespace pr10
 {
     public partial class MainWindow : Window
     {
-        public ObservableCollection<int> numbers;
+        public ArrayList numbers;// здесь мы написали, что коллекция будет в программе, а в ней её намберсы
         public MainWindow()
         {
             InitializeComponent();
-            numbers = new ObservableCollection<int>();
+            numbers = new ArrayList();//а здесь уже описали, что намберсы это коллекция
         }
 
         private void TextCh(object sender, TextChangedEventArgs e)
@@ -52,7 +53,7 @@ namespace pr10
                         numlb.Items.Add(mas[i]);
                     }
 
-                    foreach (int number in numbers)
+                    foreach (int number in numbers)//пересматриваем каждого намберса среди всех намберсов, пока не закончатся
                     {
                         if (number % 2 == 0)
                         {
