@@ -18,19 +18,17 @@
             <RowDefinition Height="110*"/>
             <RowDefinition Height="107*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btn_Calculate" Click="btnCalculate_click" Grid.Column="1" Content="Решение" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="47" Width="119"/>
-        <ListBox x:Name="lb_calc" Grid.Column="2" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="0,106,10,0" Grid.RowSpan="2"/>
-        <ListBox x:Name="lb_num" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" Margin="0,83,0,28" Grid.RowSpan="2"/>
-        <Label x:Name="lab_intervel" Grid.Column="2" Content="" HorizontalAlignment="Left" Margin="137,56,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Grid.Column="2" Content="Кол-во чётных и нечётных числе" HorizontalAlignment="Left" Margin="104,78,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.144,0.466" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tb_do" HorizontalAlignment="Center" Margin="0,73,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextCh"/>
-        <TextBox x:Name="tb_ot" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextCh"/>
-        <Label Content="Интервал" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label Content="от" HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <Label Content="до" HorizontalAlignment="Left" Margin="94,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="32"/>
-        <Button x:Name="btnClear" Click="btnClear_Click" Grid.Column="1" Content="Очистить" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="47" Width="119"/>
-        <Button x:Name="btn_Info" Click="btnInfo_Click" Grid.Column="3" Content="О программе" HorizontalAlignment="Center" Margin="0,15,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Button x:Name="btn_Exit" Click = "btnExit_Click"  Grid.Column="3" Content="Выход" HorizontalAlignment="Center" Margin="0,54,0,0" Grid.Row="3" VerticalAlignment="Top" Width="78"/>
+        <Button x:Name="Calcbtn" Content="Решение" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="50" Width="100" Click="CalcClick"/>
+        <ListBox x:Name="calclb" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,106,10,0" Grid.RowSpan="2"/>
+        <ListBox x:Name="numlb" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,1,10,109" Grid.RowSpan="2"/>
+        <TextBox x:Name="dotb" HorizontalAlignment="Center" Margin="0,0,0,10" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" TextChanged="TextCh"/>
+        <TextBox x:Name="ottb" HorizontalAlignment="Center" Margin="0,0,0,25" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="TextCh"/>
+        <Label Content="Интервал" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="64"/>
+        <Label Content="от" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="до" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+        <Button x:Name="Clearbtn" Click="clearClick" Content="Очистить" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="50" Width="100" />
+        <Button x:Name="infobtn" Click="infoClick" Grid.Column="1" Content="О программе" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="50" Width="100"/>
+        <Button x:Name="exbtn" Click = "exClick"  Grid.Column="1" Content="Выход" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="100" Height="50"/>
 
     </Grid>
 </Window>
